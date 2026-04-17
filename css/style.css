@@ -13,8 +13,7 @@ header {
 
 section {
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 1000px;
 }
 
 .projeto {
@@ -49,7 +48,7 @@ section {
     gap: 20px;
 }
 
-a {
+.projeto a {
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;

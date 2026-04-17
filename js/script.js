@@ -1,7 +1,7 @@
 const lista = document.getElementById('listaProjetos')
 
 //banco de dados
-const Projetos = [
+const projetos = [
     {
         nome: 'Login',
         descricao: 'Formulário com validação em JavaScript',
@@ -18,20 +18,22 @@ const Projetos = [
         nome: 'Buscador de CEP',
         descricao: 'consumo de API com fetch',
         link: 'https://github.com/Bruno123-n/alinhando-codigos/tree/main/buscarCep',
-        imagem: '/imagens/BuscadordeCEP.png'
+        imagem: 'imagens/BuscadordeCEP.png'
         
     }
 ]
 
-Projetos.forEach(projeto => {
+projetos.forEach(({nome, descricao, link, imagem})=> {
     const div = document.createElement('div')
     div.classList.add('projeto')
 
     div.innerHTML = `
-        <img src='${projeto.imagem}' alt='${projeto.nome}'>
-        <h3>${projeto.nome}</h3>
-        <p>${projeto.descricao}</p>
-        <a href="${projeto.link}" target="_blank">Ver projeto</a>
+        <img src='${imagem}'
+            alt='Projeto ${nome}
+            onerror="this.src="https://via.placeholder.com/300"'>
+        <h3>${nome}</h3>
+        <p>${descricao}</p>
+        <a href="${link}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
         `
 
 
