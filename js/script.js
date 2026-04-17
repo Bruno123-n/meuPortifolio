@@ -22,5 +22,12 @@ Projetos.forEach(projeto => {
     const div = document.createElement('div')
     div.classList.add('projeto')
 
-    
+    div.innerHTML = `
+        <h3>${projeto.nome}</h3>
+        <p>${projeto.descricao}</p>
+        <a href="${projeto.link}" target="_blank">Ver projeto</a>
+        `
+
+
+    lista.appendChild(div)
 })
