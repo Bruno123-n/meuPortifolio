@@ -23,19 +23,26 @@ const projetos = [
     }
 ]
 
-projetos.forEach(({nome, descricao, link, imagem})=> {
+projetos.forEach(({nome, descricao, link, imagem},index)=> {
     const div = document.createElement('div')
     div.classList.add('projeto')
 
     div.innerHTML = `
-        <img src='${imagem}'
-            alt='Projeto ${nome}
-            onerror="this.src="https://via.placeholder.com/300"'>
-        <h3>${nome}</h3>
-        <p>${descricao}</p>
-        <a href="${link}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
-        `
+    <img src="${imagem}" 
+         alt="Projeto ${nome}" 
+         onerror="this.src='https://via.placeholder.com/300'">
+    <h3>${nome}</h3>
+    <p>${descricao}</p>
+    <a href="${link}" target="_blank" rel="noopener noreferrer">Ver projeto</a>
+`
 
 
-    lista.appendChild(div)
+  lista.appendChild(div)
+
+// força o navegador a renderizar primeiro
+requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+        div.classList.add('aparecer')
+    })
+})
 })
