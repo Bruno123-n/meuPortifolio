@@ -29,6 +29,14 @@ body {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 20px;
+}
+
 .btn {
     background: white;
     color: #007bff;
@@ -40,6 +48,8 @@ body {
 
 section {
     padding: 60px 20px;
+    max-width: 1000;
+    margin: auto;
 }
 
 .projeto {
@@ -48,8 +58,14 @@ section {
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    padding: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+}
 
-    
+.projeto.aparecer {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projeto:hover {

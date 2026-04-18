@@ -39,10 +39,19 @@ projetos.forEach(({nome, descricao, link, imagem},index)=> {
 
   lista.appendChild(div)
 
-// força o navegador a renderizar primeiro
-requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-        div.classList.add('aparecer')
+
+})
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('aparecer')
+        }
     })
+}, {
+    threshold: 0.2
 })
-})
+
+document.querySelectorAll('.projeto').forEach{projeto => {
+    observer.observe(projeto)
+}}
