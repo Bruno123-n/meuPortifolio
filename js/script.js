@@ -52,6 +52,6 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.2
 })
 
-document.querySelectorAll('.projeto').forEach{projeto => {
+document.querySelectorAll('.projeto').forEach(projeto => {
     observer.observe(projeto)
-}}
+})
