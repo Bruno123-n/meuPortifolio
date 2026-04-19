@@ -27,6 +27,9 @@ projetos.forEach(({nome, descricao, link, imagem},index)=> {
     const div = document.createElement('div')
     div.classList.add('projeto')
 
+    //funciona junto com transiton dentro de css
+    div.style.transitionDelay = `${index * 0.1}s`
+
     div.innerHTML = `
     <img src="${imagem}" 
          alt="Projeto ${nome}" 
