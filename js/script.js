@@ -4,19 +4,19 @@ const lista = document.getElementById('listaProjetos')
 const projetos = [
     {
         nome: 'Login',
-        descricao: 'Formulário com validação em JavaScript',
+        descricao: 'Formulário com validação de campos e feedback visual ao usuário',
         link: 'https://github.com/Bruno123-n/alinhando-codigos/tree/main/formulario2',
         imagem: 'imagens/Login.png'
     },
     {
         nome: 'Lista de Tarefas',
-        descricao: 'Aplicação com localStorage',
+        descricao: 'Aplicação com armazenamento local (localStorage) para gerenciar tarefas',
         link: 'https://github.com/Bruno123-n/alinhando-codigos/tree/main/listadetarefas',
         imagem: 'imagens/Lista-de-Tarefa.png'
     },
     {
         nome: 'Buscador de CEP',
-        descricao: 'consumo de API com fetch',
+        descricao: 'Busca automática de endereço via API, tratando erros e exibindo dados em tempo real',
         link: 'https://github.com/Bruno123-n/alinhando-codigos/tree/main/buscarCep',
         imagem: 'imagens/BuscadordeCEP.png'
         
