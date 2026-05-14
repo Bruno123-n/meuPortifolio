@@ -9,14 +9,16 @@ html {
 }
 
 header {
-    padding: 80px 20px;
     max-width: 1000px;
     margin: auto;
+    padding: 100px 20px;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 52px;
+    margin-bottom: 10px;
 }
+
 
 p {
     color: #444;
@@ -27,19 +29,6 @@ p {
     gap: 10px;
 }
 
-.tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tech-list span {
-    background: #007bff;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 14px;
-}
 
 h2 {
     font-size: 28px;
@@ -53,17 +42,22 @@ h3 {
 }
 
 .btn {
-    background: white;
-    color: #007bff;
-    padding: 10px 20px;
-    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
 }
 
 section {
-    padding: 60px 20px;
+    padding: 90px 20px;
     max-width: 1000px;
     margin: auto;
 }
@@ -73,11 +67,11 @@ section {
     background: white;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
     padding: 15px;
     opacity: 0;
     transform: translateY(30px);
-}
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;}
 
 .projeto.aparecer {
     opacity: 1;
@@ -113,11 +107,63 @@ section {
     padding: 10px 14px;
 }
 
-.btn:hover {
-    background: #f0f0f0;
-}
-
 .projeto a:hover {
     background: #0056b3;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.tech-list li {
+    background: #1e1e1e;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tech-list span {
+    background: #007bff;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+p {
+    color: #444;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projeto {
+    width: 100%;
+  }
+}
+
+.disponivel {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #007bff;
 }
